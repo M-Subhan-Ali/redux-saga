@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { addToCart , removeFromCart } from "../redux/action"
+import { CLEAR_CART } from '../redux/constants'
 const HeroSection = () => {
   
   const someData = {
@@ -18,7 +19,7 @@ const HeroSection = () => {
     <div className="grid gap-6 ">
     <button onClick={()=>dispatch(addToCart(someData))} className='border border-gray-300 mr-2'>add to cart</button>
     <button onClick={()=>dispatch(removeFromCart(someData))} className='border border-gray-300 mr-2'>Remove from cart</button>
-    <button onClick={()=>dispatch(addToCart(someData))} className='border border-gray-300 mr-2'>clear Cart</button>
+    <button onClick={()=>dispatch(CLEAR_CARt)} className='border border-gray-300 mr-2'>clear Cart</button>
     </div>
    </div>
   )

@@ -1,4 +1,4 @@
-import { ADD_TO_CART, REMOVE_FROM_CART } from "./constants"
+import { ADD_TO_CART, CLEAR_CART, REMOVE_FROM_CART } from "./constants"
 export const cartData = ( data=[] , action ) => {
 
   // if( action.type === "sADD_TO_CART" ){  
@@ -21,7 +21,12 @@ export const cartData = ( data=[] , action ) => {
       return data 
     }
 
-    return data.slice( 0 , -1)
+    return data.slice( 0 , -1);
+    case CLEAR_CART : 
+    console.warn( "reducer clearcart called" , action )
+    data = []
+    
+    return [...data]
 
     default : return data
   }
