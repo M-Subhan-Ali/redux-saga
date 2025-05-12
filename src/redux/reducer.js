@@ -21,7 +21,7 @@ export const cartData = ( data=[] , action ) => {
       return data 
     }
 
-    return data.slice( 0 , -1);
+    return data.slice( 0 , -1 );
     case CLEAR_CART : 
     console.warn( "reducer clearcart called" , action )
     data = []
