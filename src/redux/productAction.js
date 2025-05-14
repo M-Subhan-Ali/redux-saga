@@ -1,8 +1,11 @@
 import { PRODUCT_DATA } from "./constants";
 
-export const productData = () => {
-  const data = "hello"
-  console.warn("productData action called data says" , dara);
+export const productList = async () => {
+  // const data = "hello"
+  let data = await fetch("https://jsonplaceholder.typicode.com/todos");
+  data = await data.json();
+
+  console.warn("productData action called data says" , data);
   return{
     type : PRODUCT_DATA,
     data
