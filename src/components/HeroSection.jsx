@@ -6,7 +6,7 @@ import { productList } from '../redux/productAction'
 const HeroSection = () => {
   
   const data = useSelector((state)=>state.productData)
-  console.log("Redux data", data)
+  console.warn("Redux data", data)
   const someData = {
     id:1,
     name: "John",

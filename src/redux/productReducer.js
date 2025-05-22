@@ -1,4 +1,4 @@
-import { PRODUCT_DATA } from "./constants";
+import { PRODUCT_DATA, SET_PRODUCT_DATA } from "./constants";
 
 export const productData = ( data = [] , action ) => {
 
@@ -6,6 +6,9 @@ export const productData = ( data = [] , action ) => {
     case PRODUCT_DATA : 
     console.warn( "reducer productData called" , action )
     return [action.data]
+    case SET_PRODUCT_DATA : 
+    console.warn( "reducer Set_productData called" , action )
+    return [...action.data]
     default : return data
   }
 
