@@ -15,6 +15,7 @@ const HeroSection = () => {
     hobbies: ["reading", "traveling", "cooking"],
   }
   const dispatch = useDispatch();
+  console.log(data,"data")
     
   return (
     <div className='grid justify-center items-center'>
@@ -24,6 +25,9 @@ const HeroSection = () => {
     <button onClick={()=>dispatch(removeFromCart(someData))} className='border border-gray-300 mr-2'>Remove from cart</button>
     <button onClick={()=>dispatch(clearCart())} className='border border-gray-300 mr-2'>clear Cart</button>
     <button onClick={()=>dispatch(productList())} className='border border-gray-300 mr-2'>Get Product List</button>
+    </div>
+    <div className='product-container'>
+
     </div>
    </div>
   )
