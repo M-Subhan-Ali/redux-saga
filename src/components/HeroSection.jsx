@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart , clearCart, removeFromCart } from "../redux/action"
 import { productList } from '../redux/productAction'
-
 const HeroSection = () => {
   
   const data = useSelector((state)=>state.productData)
+
+  useEffect(()=>{
+    dispatch(productList())
+  },[])
+  
   console.warn("Redux data", data)
   const someData = {
     id:1,
@@ -15,7 +19,6 @@ const HeroSection = () => {
     hobbies: ["reading", "traveling", "cooking"],
   }
   const dispatch = useDispatch();
-  console.log(data,"data")
     
   return (
     <div className='grid justify-center items-center'>
